@@ -4,6 +4,6 @@ num = File.read(file)
 
 celsius = num.to_i
 fahrenheit = (celsius * 9 / 5) + 32
-print "The num is " + num + "\n"
+print "The num is " + num + ".\n"
 print "Result: "
 puts fahrenheit
