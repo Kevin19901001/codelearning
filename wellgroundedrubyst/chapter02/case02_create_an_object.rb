@@ -42,8 +42,8 @@ end
 # 通过字符串插值缩短代码
 puts "This ticket is for #{ticket.event}, at #{ticket.venue}, on #{ticket.date}." +
      "The performer is #{ticket.performer}." +
-	 "The seat is #{ticket.seat}, " +
-	 "and it costs $#{"%.2f." % ticket.price}"
+     "The seat is #{ticket.seat}, " +
+     "and it costs $#{"%.2f." % ticket.price}"
 	 
 
 # 用方法表达布尔状态
