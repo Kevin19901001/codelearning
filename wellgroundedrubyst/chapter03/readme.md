@@ -1,0 +1,1 @@
+# Use class to orgnize objects.
