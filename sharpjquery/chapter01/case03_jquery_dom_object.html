@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta content="text/html" charset="utf-8">
+		<script src="../common/jquery-3.2.1.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h3>例子</h3>
+		<p titile="选择你喜欢的水果.">你最喜欢的水果是?</p>
+		<ul>
+			<li>苹果</li>
+			<li>橘子</li>
+			<li>菠萝</li>
+		</ul>
+		<!-- DOM object -->
+		<script type="text/javascript">
+			var fruits = document.getElementsByTagName("li");
+			for(var i=0; i < fruits.length; i++){
+				alert(fruits[i].innerHTML);
+			}
+		</script>
+		<!-- jQuery object -->
+		<script type="text/javascript">
+			var $fruits = $("li");
+			alert($fruits.html());	// Just put the first element.
+			for(i=0; i < $fruits.length; i++){
+				alert($fruits[i].innerHTML);
+			}
+		</script>
+		<!-- jQuery object to DOM object -->
+		<script type="text/javascript">
+			var $jqObj = $("p");
+			var domObj = $jqObj[0];
+			//var domObj = $jqObj.get(0);
+			alert(domObj.innerHTML);
+		</script>
+		<!-- DOM object to jQuery object -->
+		<script type="text/javascript">
+			var domObj = document.getElementsByTagName("p");
+			var $jqObj = $(domObj);
+			//alert($jqObj[0].innerHTML);
+			alert($jqObj.html());
+		</script>
+	</body>
+</html>
