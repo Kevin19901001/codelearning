@@ -11,6 +11,7 @@
 			<li>橘子</li>
 			<li>菠萝</li>
 		</ul>
+
 		<!-- DOM object -->
 		<script type="text/javascript">
 			var fruits = document.getElementsByTagName("li");
@@ -18,6 +19,7 @@
 				alert(fruits[i].innerHTML);
 			}
 		</script>
+		
 		<!-- jQuery object -->
 		<script type="text/javascript">
 			var $fruits = $("li");
@@ -26,6 +28,7 @@
 				alert($fruits[i].innerHTML);
 			}
 		</script>
+		
 		<!-- jQuery object to DOM object -->
 		<script type="text/javascript">
 			var $jqObj = $("p");
@@ -33,6 +36,7 @@
 			//var domObj = $jqObj.get(0);
 			alert(domObj.innerHTML);
 		</script>
+		
 		<!-- DOM object to jQuery object -->
 		<script type="text/javascript">
 			var domObj = document.getElementsByTagName("p");
