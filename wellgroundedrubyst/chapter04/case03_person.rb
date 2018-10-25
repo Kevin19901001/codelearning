@@ -13,13 +13,13 @@ class Person
     @hobbies << hobby
   end
 
-  def has_friends(friend)
+  def has_friend(friend)
     @friends << friend
   end
 
   def self.method_missing(m, *args)
     method = m.to_s
-    if method.start_with("all_with_")
+    if method.start_with?("all_with_")
       attr = method[9..-1]
       if self.public_method_defined?(attr)
         PEOPLE.find_all do |person|
