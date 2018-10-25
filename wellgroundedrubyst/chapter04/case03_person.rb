@@ -48,5 +48,5 @@ Person.all_with_friends(p).each do |person|
 end
 
 Person.all_with_hobbies("rings") do |person|
-  puts "#{persn.name} is into rinds."
+  puts "#{persn.name} is into rings."
 end
