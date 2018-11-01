@@ -48,3 +48,25 @@ c.m
 c.n
 
 puts "Top level: a = #{a}"
+
+
+# Local scope and self
+class C
+
+  def x(value_for_a, recurse=false)
+    a = value_for_a
+    print "Here's the object id for 'self':"
+    puts self.object_id
+    puts "And here's a:"
+    puts a
+    if recurse
+      puts "Calling myself (recursion)..."
+      x("Second value for a")
+      puts "Back after recursion; here's a:"
+      puts a
+    end
+  end
+
+end
+c = C.new
+c.x("First value for a", true)
