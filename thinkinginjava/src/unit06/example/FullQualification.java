@@ -1,4 +1,4 @@
-packag unit06.example;
+package unit06.example;
 
 /**
  * This example is to talk ablout 'package': lib unit.
