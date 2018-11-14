@@ -1,1 +1,1 @@
-# Codes of <<Spring in Action>>.
+# Spring in Action

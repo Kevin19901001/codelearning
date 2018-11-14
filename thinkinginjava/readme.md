@@ -1,1 +1,1 @@
-# <<Thinking In Java>>
+# Thinking In Java.
