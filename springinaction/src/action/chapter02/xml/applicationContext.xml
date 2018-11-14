@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:Context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<!-- Start spring component scan -->
+	<!-- <Context:component-scan base-package="action.chapter02.entity"></Context:component-scan> -->
+	
+	
+	<!-- Constructor injects bean reference. -->
+	<!-- 
+	<bean id="compactDisc" class="action.chapter02.SgtPeppers"></bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer">
+		<constructor-arg ref="compactDisc"></constructor-arg>
+	</bean>
+	 -->
+	
+	
+	<!-- Use spring 'c' namespace to replace '<constructor-args>'. -->
+	<!-- 
+	<bean id="compactDisc" class="action.chapter02.entity.SgtPeppers"></bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" c:compactDisc-ref="compactDisc"></bean>
+	 -->
+	
+	
+	<!-- Inject literal into constructor. -->
+	<!-- 
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc">
+		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"></constructor-arg>
+		<constructor-arg value="The Beatles"></constructor-arg>
+	</bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" c:compactDisc-ref="compactDisc"></bean>
+	 -->
+	 
+	 
+	<!-- Use 'c' namespace and index args to complete literal injection. -->
+	<!-- 
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc" c:_0="Sgt. Pepper's Lonely Hearts Club Band" c:_1="The Beatles"></bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" c:_-ref="compactDisc"></bean>
+	 -->
+	
+	
+	<!-- Wiring collection, '<constructor-args>' could do it, but 'c' could not. -->
+	<!-- 
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc">
+		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"></constructor-arg>
+		<constructor-arg value="The Beatles"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Sgt. Pepper's Loney Hearts Club Band</value>
+				<value>With a Little Help from My Friends</value>
+				<value>Lucy in the Sky with Diamonds</value>
+				<value>Getting Better</value>
+				<value>Fixing a Hole</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" c:_-ref="compactDisc"></bean>
+	 -->
+	 
+	
+	<!-- Properties injection. Inject 'compactDisc' as a property into 'cdPlayey' by setter.-->
+	<!--
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc">
+		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"></constructor-arg>
+		<constructor-arg value="The Beatles"></constructor-arg>
+	</bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer">
+		<property name="compactDisc" ref="compactDisc"></property>
+	</bean>
+	 -->
+	 
+	
+	<!-- Use 'p' namespace to set property. -->
+	<!--
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc">
+		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"></constructor-arg>
+		<constructor-arg value="The Beatles"></constructor-arg>
+	</bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" p:compactDisc-ref="compactDisc"></bean>
+	 --> 
+	
+	
+	<!-- Inject literal into properties. -->
+	<!--
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc" p:title="Sgt. Pepper's Lonely Hearts Club Band" p:artist="The Beatles">
+		<property name="tracks">
+			<list>
+				<value>Sgt. Pepper's Loney Hearts Club Band</value>
+				<value>With a Little Help from My Friends</value>
+				<value>Lucy in the Sky with Diamonds</value>
+				<value>Getting Better</value>
+				<value>Fixing a Hole</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" p:compactDisc-ref="compactDisc"></bean>
+	 -->
+	 
+	 
+	<!-- 'p' namespace can not used to wire collection. Therefore, we need 'util' namespace. -->
+	<util:list id="trackList">
+		<value>Sgt. Pepper's Loney Hearts Club Band</value>
+		<value>With a Little Help from My Friends</value>
+		<value>Lucy in the Sky with Diamonds</value>
+		<value>Getting Better</value>
+		<value>Fixing a Hole</value>
+	</util:list>
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc" p:title="Sgt. Pepper's LonelyHearts Club Band" p:artist="The Beatles" p:tracks-ref="trackList"></bean>
+	<!-- <bean id="cdPlayer" class="action.chapter02.entity.CDPlayer" p:compactDisc-ref="compactDisc"></bean> -->
+	
+</beans>

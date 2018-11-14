@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<!-- 'p' namespace can not used to wire collection. Therefore, we need 'util' namespace. -->
+	<util:list id="trackList">
+		<value>Sgt. Pepper's Loney Hearts Club Band</value>
+		<value>With a Little Help from My Friends</value>
+		<value>Lucy in the Sky with Diamonds</value>
+		<value>Getting Better</value>
+		<value>Fixing a Hole</value>
+	</util:list>
+	<bean id="compactDisc" class="action.chapter02.entity.BlankDisc" p:title="Sgt. Pepper's LonelyHearts Club Band" p:artist="The Beatles" p:tracks-ref="trackList"></bean>
+
+
+</beans>
