@@ -15,6 +15,6 @@ puts "Match!" if "The alphabet starts with abc." =~ /abc/		# Match!
 
 
 # The difference between 'match' and '=~' is the returned values: 'match' returns an instance of
-# class 'MatchData'; '=~' returns an index.
+# class 'MatchData'; '=~' returns an index of the matched position.
 p "The alphabet starts with abc." =~ /abc/				# 25
 p /abc/.match("The alphabet starts with abc.")				# #<MatchData "abc"
