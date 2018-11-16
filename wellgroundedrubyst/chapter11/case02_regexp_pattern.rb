@@ -14,4 +14,4 @@ puts "Match!" if /.ejected/.match("%ejected")           # Match
 /[a-z]/
 /[A-Fa-f0-9]/
 string = "ABC3934 is a hex number."
-puts string =~ /[^A-Fa-f0-9]/				# 7
+puts string =~ /[^A-Fa-f0-9]/				# 7		'^' presents 'negative'
