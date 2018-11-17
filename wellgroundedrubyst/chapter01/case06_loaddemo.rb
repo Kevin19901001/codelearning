@@ -1,4 +1,4 @@
-# 加载外部文件和扩展
+# Load external files and extensions:
 puts "This is the first (master) program file."
 #load "H:\\codelearning\\wellgroundedrubist\\chapter01\\case07_loadee.rb"     # ok
 #load "H:\\codelearning\\wellgroundedrubist\\chapter01\\case07_loadee"        # error
