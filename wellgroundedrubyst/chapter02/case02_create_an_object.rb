@@ -1,7 +1,7 @@
-# 制作一个对象
+# Create an object:
 ticket = Object.new
 
-# 给ticket对象赋予属性和数据
+# Give behaviors and data to object:
 def ticket.date
   "01/02/03"
 end
@@ -26,7 +26,7 @@ def ticket.price
   5.5
 end
 
-# 查询ticket对象
+# Query Ticket object:
 # print "This ticket is for: "
 # print ticket.event + ", at "
 # print ticket.venue + ", on "
@@ -39,14 +39,14 @@ end
 # puts "%.2f." % ticket.price
 
 
-# 通过字符串插值缩短代码
+# Reduce codes through string interpolation:
 puts "This ticket is for #{ticket.event}, at #{ticket.venue}, on #{ticket.date}." +
      "The performer is #{ticket.performer}." +
      "The seat is #{ticket.seat}, " +
      "and it costs $#{"%.2f." % ticket.price}"
 	 
 
-# 用方法表达布尔状态
+# Express boolean state by method:
 def ticket.available?
   false
 end
@@ -58,7 +58,7 @@ else
 end
 
 
-# 真值和假值
-if puts "You'll see that."																# 说明puts返回的是nil，而nil为假值。
-  puts "But not that."
+# True and false value:
+if puts "You'll see that."									
+  puts "But not that."		# It indicates that 'puts' returns nil, and nil presents false.
 end
