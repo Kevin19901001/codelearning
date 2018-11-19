@@ -15,15 +15,14 @@ puts "And back again to the first file."
 # The current file
 puts __FILE__
 
-# 位于默认加载路径中的文件
+# The file in default loading path:
 puts $:
 
 
-# 注意：记住load是一个方法，在程序文件中，只有Ruby遇到它的时候才会执行。
-# Ruby不会搜索整个文件去执行load命令。也就是说，当Ruby解释器遇到它的
-# 时候，它才会去寻找它要加载的文件。这意味着需要加载的文件名可以在运行时
-# 动态地决定。甚至可以在条件语句中包含一个load指令的调用，让它只会在条
-# 件为true时才会被执行。
+# Note: remember that 'load' is a methd, in program files, it just running when ruby meets it.
+# Ruby would not search the whole directory to execute 'oad' command. It is said, when ruby 
+# inpretor meet it, it will find the file to load. It means the file to be loaded can be decided 
+# dynamically, even in 'if' condition.
 
 
 # load命令总是会加载所请求的文件，不论这个文件是否已经加载过。加入一个
