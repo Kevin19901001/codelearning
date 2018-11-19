@@ -1,4 +1,5 @@
-file = "H:\\codelearning\\wellgroundedrubist\\chapter01\\temp.dat"
+#file = "H:\\codelearning\\wellgroundedrubist\\chapter01\\temp.dat"	# In windows
+file = "temp.dat"							# In linux
 puts "Reading Celsius temperature value from data file..."
 num = File.read(file)
 
