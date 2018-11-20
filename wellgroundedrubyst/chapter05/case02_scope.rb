@@ -151,7 +151,7 @@ class Car
   attr_reader :make
 
   def self.total_count
-    @total_count |= 0
+    @total_count ||= 0
   end
 
   def self.total_count=(n)
@@ -165,11 +165,12 @@ class Car
     end
   end
 
-  def initiaize(make)
+  def initialize(make)
     if @@makes.include?(make)
       puts "Creating a new car #{make}!"
       @make = make
       @@cars[make] += 1
+      p self
       self.class.total_count += 1
     else
       raise "No such make: #{make}!"
@@ -186,6 +187,8 @@ class Hybrid < Car
 
 end
 
+Hybrid.add_make("Honda")
+Hybrid.add_make("Ford")
 h3 = Hybrid.new("Honda")
 f2 = Hybrid.new("Ford")
 puts "There are #{Hybrid.total_count} hybrids on road."
