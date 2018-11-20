@@ -72,7 +72,7 @@ c = C.new
 c.x("First value for a", true)
 
 
-# Class variable
+# Class variable cross over class and instance:
 class Car
 
   @@makes = []
@@ -120,4 +120,24 @@ puts "There are #{h2.make_mates}."
 puts "Counting total cars..."
 puts "There are #{Car.total_count}."
 
-x = Car.new("Brand X")
+# x = Car.new("Brand X")	# No such make... RunTimeError
+
+
+# Class variable and class hierarchy:
+class Parent
+
+  @@value = 100
+
+end
+
+class Child < Parent
+
+  @@value = 200
+
+end
+
+class Parent
+
+  puts @@value
+
+end
