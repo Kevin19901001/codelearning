@@ -39,3 +39,25 @@ end
 b = Baker.new
 #b.add_egg	# private method `add_egg' called for #<Baker:0x007fd6e11893d0> (NoMethodError)
 b.bake_cake	# Flour has been poured! Eggs have been added!
+
+
+class Dog
+  attr_reader :age, :dog_years
+
+  def age=(years)
+    @age = years
+    #dog = self
+    #dog.dog_years = years	# private method `dog_years=' called for ...
+    self.dog_years = years * 7
+  end
+
+  def dog_years=(years)
+    @dog_years = years
+  end
+
+  private :dog_years=
+end
+
+rover = Dog.new
+rover.age = 10
+puts "Rover is #{rover.dog_years} in dog years."
