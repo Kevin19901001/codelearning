@@ -35,4 +35,5 @@ class Baker
 end
 
 b = Baker.new
-b.add_egg
+#b.add_egg	# private method `add_egg' called for #<Baker:0x007fd6e11893d0> (NoMethodError)
+b.bake_cake
