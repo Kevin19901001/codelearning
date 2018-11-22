@@ -61,3 +61,6 @@ end
 rover = Dog.new
 rover.age = 10
 puts "Rover is #{rover.dog_years} in dog years."
+
+
+# Protected methods:
