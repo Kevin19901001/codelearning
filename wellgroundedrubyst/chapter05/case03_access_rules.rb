@@ -84,3 +84,6 @@ class C
   protected :n
 end
 
+c1 = C.new(100)
+c2 = C.new(101)
+c1.compare(c2)
