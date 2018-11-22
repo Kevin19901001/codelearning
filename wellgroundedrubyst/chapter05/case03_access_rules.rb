@@ -86,4 +86,4 @@ end
 
 c1 = C.new(100)
 c2 = C.new(101)
-c1.compare(c2)
+c1.compare(c2)		# The other object's n is bigger.  
