@@ -1,9 +1,9 @@
 create table t_employee(
-	empno		int,
+    empno		int,
     ename		varchar(20),
     job			varchar(40),
     MGR			int,
-    Hiredate	date,
+    Hiredate	        date,
     sal			double(10, 2),
     comm		double(10, 2),
     deptno		int
