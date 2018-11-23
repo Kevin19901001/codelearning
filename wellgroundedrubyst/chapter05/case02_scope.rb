@@ -72,7 +72,7 @@ c = C.new
 c.x("First value for a", true)
 
 
-# Class variable
+# Class variable cross over class and instance:
 class Car
 
   @@makes = []
@@ -120,4 +120,75 @@ puts "There are #{h2.make_mates}."
 puts "Counting total cars..."
 puts "There are #{Car.total_count}."
 
-x = Car.new("Brand X")
+# x = Car.new("Brand X")	# No such make... RunTimeError
+
+
+# Class variable and class hierarchy:
+class Parent
+
+  @@value = 100
+
+end
+
+class Child < Parent
+
+  @@value = 200
+
+end
+
+class Parent
+
+  puts @@value
+
+end
+
+
+# Use instance variable of class object to maintain every objects' state:
+class Car
+
+  @@makes = []
+  @@cars = {}
+  attr_reader :make
+
+  def self.total_count
+    @total_count ||= 0
+  end
+
+  def self.total_count=(n)
+    @total_count = n
+  end
+
+  def self.add_make(make)
+    unless @@makes.include?(make)
+      @@makes << make
+      @@cars[make] = 0
+    end
+  end
+
+  def initialize(make)
+    if @@makes.include?(make)
+      puts "Creating a new car #{make}!"
+      @make = make
+      @@cars[make] += 1
+      p self
+      self.class.total_count += 1
+    else
+      raise "No such make: #{make}!"
+    end
+  end
+
+  def make_mates
+    @@cars[self.make]
+  end
+
+end
+
+class Hybrid < Car
+
+end
+
+Hybrid.add_make("Honda")
+Hybrid.add_make("Ford")
+h3 = Hybrid.new("Honda")
+f2 = Hybrid.new("Ford")
+puts "There are #{Hybrid.total_count} hybrids on road."

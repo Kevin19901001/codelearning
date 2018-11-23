@@ -1,7 +1,7 @@
-# 创建通用对象
+# Create common object:
 obj = Object.new
 
-# 定义对象的行为
+# Define behavior of object:
 def obj.talk
   puts "I am an object."
   puts "Do you object?"
@@ -10,7 +10,7 @@ end
 obj.talk
 
 
-# 带参数的方法
+# Method with arguments:
 def obj.c2f(c)
   c * 9.0 / 5 + 32
 end

@@ -1,22 +1,22 @@
 require "rbconfig"
 
-# Ruby命令行工具
+# Ruby command line tools:
 puts RbConfig::CONFIG["bindir"]
 
-# Ruby标准库  
+# Ruby standard lib:
 puts RbConfig::CONFIG["rubylibdir"]
   
-# 特定架构的扩展和库文件（已编译，二进制文件）
+# Special architecture（compiled，binary files）
 puts RbConfig::CONFIG["archdir"]
   
-# 用户自己或第三方扩展库文件（用Ruby编写）
+# User's own or third extensions lib files（written by Ruby）:
 puts RbConfig::CONFIG["sitedir"]
   
-# 第三方扩展和库文件（用Ruby编写）
+# Third extensions and lib files(witten by Ruby):
 puts RbConfig::CONFIG["vendordir"]
   
-# 用户自己的Ruby语言扩展（用Ruby语言编写）
+# User's own Ruby language extensions(written by Ruby）:
 puts RbConfig::CONFIG["sitelibdir"]
   
-# 用户自己的Ruby语言扩展（用C语言编写）
+# User's own Ruby language extensions(written by C):
 puts RbConfig::CONFIG["sitearchdir"]
