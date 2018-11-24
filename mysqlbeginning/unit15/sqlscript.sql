@@ -4,7 +4,7 @@ use company;
 show variables like 'tx_isolation';
 
 create table test_1(
-	id			int,
+    id		int,
     username	varchar(20)
 )
 engine=innodb;
