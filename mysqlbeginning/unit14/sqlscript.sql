@@ -44,7 +44,7 @@ drop procedure if exists employee_count;
 delimiter $
 create procedure employee_count (out num integer)
 begin
-	declare employee_sal integer;
+    declare employee_sal integer;
     declare flag integer;
     declare cursor_employee cursor for select sal from t_employee;
     declare continue handler for not found set flag = 1;
