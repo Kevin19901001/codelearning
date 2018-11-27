@@ -14,10 +14,10 @@ public class JavaVariable {
         
         int a = 1, b = 2;	          // Declare two variables 1 and 2.
         int c,d = 3;
-        System.out.println("a: " + a);    // 1.
-        System.out.println("b: " + b);    // 2.
+        System.out.println("a: " + a);    // a: 1.
+        System.out.println("b: " + b);    // b: 2.
         //System.out.println("c: " + c);  // Syntax error, c has not been declared!
-        System.out.println("d: " + d);    // 3.
+        System.out.println("d: " + d);    // c: 3.
     }
 
     //Init variable:
