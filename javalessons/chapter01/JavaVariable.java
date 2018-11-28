@@ -29,6 +29,11 @@ public class JavaVariable {
         int n = 6;
         sum = m + n;
         System.out.println("sum : " + sum);	// sum : 11.
+
+        int num;				// Declare a variable.
+        num = 0;				// Init variable before using it.
+        num = num + 100;
+        System.out.println("num : " + num);	// num : 100
     }
 
 
