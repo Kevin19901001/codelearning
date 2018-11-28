@@ -5,8 +5,8 @@ public class JavaVariable {
     int b = 6;
     int c = a + b;
 
-    // Variable declaration:
     public static void main(String[] args){
+        // Variable declaration:
         //d = 1;                          // Syntax error, an undeclared variable can not be used!
         int score = 100;
         //scord = 100;                    // Syntax error, scord has not been declared!
@@ -34,9 +34,17 @@ public class JavaVariable {
         num = 0;				// Init variable before using it.
         num = num + 100;
         System.out.println("num : " + num);	// num : 100
+
+
+	// Variable access:
+        int u = 100;
+        u = u + 200;
+        
+        int salary;
+        //salary = 15000.50;			// Syntax error! Can not convert Integer into Float
+        
+        Double price = 123.456;
+        //int v = price%2;			// Syntax error! Value of 'price%2' is Double type.
     }
-
-
-    // Access variable:
 
 }
