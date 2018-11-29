@@ -34,5 +34,16 @@ public class JavaTypes {
         g = g - 1;
         System.out.println("f = " + f);		// f = -2147483648
         System.out.println("g = " + g);		// g = 2147483647
+
+
+        // Long type:
+        // Long as literal, add 'l' in the end:
+        //long h = 10000000000;		// Syntax error
+        long i = 10000000000l;		
+
+        long distance1 = 10000 * 365 * 24 * 60 * 299792458l;
+        System.out.println("distance1 = " + distance1);
+        long distance2 = 10000 * 365 * 24 * 60 * 299792458;
+        System.out.println("distance2 = " + distance2);		// Overflow.
     }
 }
