@@ -15,7 +15,7 @@ public class JavaTypes {
         int c = 0303240;		// Octal.
         //int d = 10000000000;	// Syntax error! Too big Integer!
 
-
+        // Division operation of integer type returns integer:
         int e = 5/3;
         System.out.println(e);	// 1.
 
@@ -25,6 +25,14 @@ public class JavaTypes {
         System.out.println(percent + "%");		// 0%.
     
         percent = 100 * error/total;
-        System.out.println(percent + "%");		// 26%.		
+        System.out.println(percent + "%");		// 26%.
+
+        // Avoid verflowing when operating:
+        int f = 2147483647;
+        int g = -2147483648;
+        f = f + 1;
+        g = g - 1;
+        System.out.println("f = " + f);		// f = -2147483648
+        System.out.println("g = " + g);		// g = 2147483647
     }
 }
