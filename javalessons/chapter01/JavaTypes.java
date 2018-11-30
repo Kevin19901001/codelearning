@@ -45,5 +45,8 @@ public class JavaTypes {
         System.out.println("distance1 = " + distance1);
         long distance2 = 10000 * 365 * 24 * 60 * 299792458;
         System.out.println("distance2 = " + distance2);		// Overflow.
+
+        long time = System.currentTimeMillis();
+        System.out.println(time);
     }
 }
