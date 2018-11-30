@@ -1,11 +1,17 @@
 public class JavaTypes {
-//		    Java basic data type
-//			        |
-//			        |
-//    	  Integer            Float        char        boolean
-//            |		        |
-//            |		        |
-//  byte short int long    float  double
+
+    /**
+     *
+     * @Author Kevin
+     * @since 2018/11/25
+     * @modify 2018/11/30
+     *
+     */
+
+    // Decimal: byte short int long    
+    // Float  : float  double
+    // Char   : char
+    // Boolean: boolean
 
     public static void main(String[] args){
         // int type:
@@ -46,7 +52,38 @@ public class JavaTypes {
         long distance2 = 10000 * 365 * 24 * 60 * 299792458;
         System.out.println("distance2 = " + distance2);		// Overflow.
 
+        // Use time millis to store date and time:
         long time = System.currentTimeMillis();
-        System.out.println(time);
+        System.out.println(time);			// 1543584137195
+
+
+        // Double type:
+        double money = 3.0;
+        double price = 2.9;
+        System.out.println(money - price);	// 0.10000000000000009, double oprator would occur round-off error.
+
+        double pi = 3.14;
+        //float f1 = 3.14;		// Syntax error! Double to float might have precision lose.
+        
+
+        // Char type:
+        char c1 = 'C';
+        char c2 = '\u4e2d';
+        System.out.println(c1);		// C.
+        System.out.println(c2);		// 中
+
+        char c3 = 65;
+        char c4 = 'A';
+        char c5 = '\u0041';
+        char c6 = '\\';
+        char c7 = '\'';
+        System.out.println(c3);		// A.
+        System.out.println(c4);		// A.
+        System.out.println(c5);		// A.
+        System.out.println(c6);		// \.
+        System.out.println(c7);		// '
+
+
+        // Boolean type:
     }
 }
