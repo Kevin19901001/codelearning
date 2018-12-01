@@ -1,3 +1,5 @@
+package chapter01;
+
 /**
  * 
  * @decription Java types
@@ -15,9 +17,12 @@ public class JavaTypes {
     public static void main(String[] args){
         // int type:
         // (-2^21) ~ (2^31-1)
-        int a = 100;										// Decimal.
-        int b = 0x186a0;									// Hex.
-        int c = 0303240;									// Octal.
+        @SuppressWarnings("unused")
+		int a = 100;											// Decimal.
+        @SuppressWarnings("unused")
+		int b = 0x186a0;										// Hex.
+        @SuppressWarnings("unused")
+		int c = 0303240;										// Octal.
         //int d = 10000000000;									// Syntax error! Too big Integer!
 
         // Division operation of integer type returns integer:
@@ -27,29 +32,30 @@ public class JavaTypes {
         int total = 87;
         int error = 23;
         int percent = error/total * 100;
-        System.out.println(percent + "%");							// 0%.
+        System.out.println(percent + "%");						// 0%.
     
         percent = 100 * error/total;
-        System.out.println(percent + "%");							// 26%.
+        System.out.println(percent + "%");						// 26%.
 
         // Avoid verflowing when operating:
         int f = 2147483647;
         int g = -2147483648;
         f = f + 1;
         g = g - 1;
-        System.out.println("f = " + f);								// f = -2147483648
-        System.out.println("g = " + g);								// g = 2147483647
+        System.out.println("f = " + f);							// f = -2147483648
+        System.out.println("g = " + g);							// g = 2147483647
 
 
         // Long type:
         // Long as literal, add 'l' in the end:
         //long h = 10000000000;									// Syntax error
-        long i = 10000000000l;		
+        @SuppressWarnings("unused")
+		long i = 10000000000l;		
 
         long distance1 = 10000 * 365 * 24 * 60 * 299792458l;
         System.out.println("distance1 = " + distance1);
         long distance2 = 10000 * 365 * 24 * 60 * 299792458;
-        System.out.println("distance2 = " + distance2);						// Overflow.
+        System.out.println("distance2 = " + distance2);			// Overflow.
 
         // Use time millis to store date and time:
         long time = System.currentTimeMillis();
@@ -59,10 +65,11 @@ public class JavaTypes {
         // Double type:
         double money = 3.0;
         double price = 2.9;
-        System.out.println(money - price);							// 0.10000000000000009, double oprator would occur round-off error.
+        System.out.println(money - price);						// 0.10000000000000009, double oprator would occur round-off error.
 
-        double pi = 3.14;
-        //float f1 = 3.14;									// Syntax error! Double to float might have precision lose.
+        @SuppressWarnings("unused")
+		double pi = 3.14;
+        //float f1 = 3.14;										// Syntax error! Double to float might have precision lose.
         
 
         // Char type:
@@ -84,5 +91,13 @@ public class JavaTypes {
 
 
         // Boolean type:
+        int age = 18;
+        boolean isChild = age < 16;
+        System.out.println(isChild);
+        @SuppressWarnings("unused")
+		boolean running = true;
+        @SuppressWarnings("unused")
+		boolean closed = false;
     }
 }
+
