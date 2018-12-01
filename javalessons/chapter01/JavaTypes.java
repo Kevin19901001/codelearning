@@ -98,6 +98,23 @@ public class JavaTypes {
 		boolean running = true;
         @SuppressWarnings("unused")
 		boolean closed = false;
+
+
+        // Type convertion:
+        int j = 100;
+        int k = 200;
+        @SuppressWarnings("unused")
+		long l = j + k;											// Convert int to lng automatically.
+        long l1 = 2014l;
+        @SuppressWarnings("unused")
+		int l2 = (int)l1;
+        long l3 = 1024L * 1024 * 1024 * 4;
+        int j2 = (int)l3;										// Overflow.
+        System.out.println(j2);									// 0
+        
+        double dpi = 3.1415926535897932384;
+        float fl = (float)dpi;									// This operation will cause the precision lose!
+        System.out.println(fl);									// 3.1415927
     }
 }
 
