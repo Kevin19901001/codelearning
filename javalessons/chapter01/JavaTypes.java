@@ -115,6 +115,24 @@ public class JavaTypes {
         double dpi = 3.1415926535897932384;
         float fl = (float)dpi;									// This operation will cause the precision lose!
         System.out.println(fl);									// 3.1415927
+
+
+        // Auto oonvertion when data operating:
+        long longDistance = 10000 * 365 * 24 * 60 * 60 * 299792458l;	// Bebause of long type literal, the result is long type.
+        System.out.println(longDistance);
+        double change = 800 - 599.0;
+        System.out.println(change);
+        
+        double percent1 = 80/100;
+        System.out.println(percent1);							// 0.0.
+        
+        double percent2 = 80.0/100;								
+        System.out.println(percent2);							// 0.8.
+        
+        
+        // Type byte, char, short convert into int:
+        // Literal of int can be valued to byte, chat and short.
+        // In operation, byte, char, short will be conveted int int first.
     }
 }
 
