@@ -56,6 +56,17 @@ public class OperatorAndExpression {
 		int number1 = 200;
 		boolean bool1 = !flag1 || (number1 >= 0 && number1 < 100);
 		System.out.println(bool1);															// flase.
+
+                // Logic short:
+		int number3 = 100;
+		int number4 = 200;
+		boolean logicShort1 = (number3 > number4) && (number3++ > 100);
+		System.out.println(logicShort1);													// false.
+		System.out.println(number3);														// 100. Because "number3++" would not be executed.
+		
+		boolean logicShort2 = number3 > 0 || number4++ > 200;
+		System.out.println(logicShort2);													// true.
+		System.out.println(number4);														// 200. Because "number4++" would not be executed.
 	}
 
 }
