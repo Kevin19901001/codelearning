@@ -18,7 +18,11 @@ public class FloatTypeErrors {
 	 * 
 	 */
 	public static void main(String[] args) {
-		
+		// float f1 = 3.14;        // Syntax error! Incompatible type!
+                double money = 3.0;
+                double price = 2.9;
+                System.out.println(money - price);
+                
 	}
 
 }
