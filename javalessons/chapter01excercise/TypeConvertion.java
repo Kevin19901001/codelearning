@@ -13,7 +13,7 @@ public class TypeConvertion{
     /**
      *
      * @author kevin
-     * @para args
+     * @param args
      * @since 2018/12/10
      *
      */
