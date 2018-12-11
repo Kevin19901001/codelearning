@@ -37,7 +37,7 @@ public class TypeConvertion{
 
         byte b1 = 28;
         byte b2 = 20;
-        // byte b3 = b1 + b2;                     // Systax error! (b1 + b2) is type of Integer.
+        // byte b3 = b1 + b2;                  // Systax error! (b1 + b2) is type of Integer.
         // System.out.println(b3);
 
         byte b4 = 28;
