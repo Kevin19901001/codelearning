@@ -27,3 +27,4 @@ create table emp(
 );
 show tables;                  // show tables in database 'test1'. There is 'emp'.
 desc emp;                     // Show the detail of table 'emp'.
+show create table emp \G      // Show more information about table 'emp'.
