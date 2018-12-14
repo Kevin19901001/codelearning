@@ -28,3 +28,7 @@ create table emp(
 show tables;                  // show tables in database 'test1'. There is 'emp'.
 desc emp;                     // Show the detail of table 'emp'.
 show create table emp \G      // Show more information about table 'emp'.
+
+// Delete a table from specified database:
+// drop table tablename
+drop table emp;		      // Delete table emp from 'test1'.
