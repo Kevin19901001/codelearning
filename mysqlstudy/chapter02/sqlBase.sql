@@ -32,3 +32,7 @@ show create table emp \G      // Show more information about table 'emp'.
 // Delete a table from specified database:
 // drop table tablename
 drop table emp;		      // Delete table emp from 'test1'.
+
+// Modify table:
+// Change table type:
+// alter table tablename modify [column] column_definition [first | after col_name]
