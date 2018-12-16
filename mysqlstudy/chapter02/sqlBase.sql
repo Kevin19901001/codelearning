@@ -36,3 +36,4 @@ drop table emp;		      // Delete table emp from 'test1'.
 // Modify table:
 // Change table type:
 // alter table tablename modify [column] column_definition [first | after col_name]
+alter table emp modify ename varchar(20);
