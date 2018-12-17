@@ -37,3 +37,7 @@ drop table emp;		      // Delete table emp from 'test1'.
 // Change table type:
 // alter table tablename modify [column] column_definition [first | after col_name]
 alter table emp modify ename varchar(20);
+
+// Add a new table field:
+desc emp;
+alter table emp add column age int(3);
