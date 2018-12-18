@@ -41,3 +41,8 @@ alter table emp modify ename varchar(20);
 // Add a new table field:
 desc emp;
 alter table emp add column age int(3);
+
+// Delete a table field:
+// alter table tablename drop [column] column_name
+desc emp;
+alter table emp drop column age;
