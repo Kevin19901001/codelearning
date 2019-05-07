@@ -11,10 +11,10 @@ puts "And the id of the integer 100 is #{100.object_id}."
 
 # Although variable 'a' and variable 'b' are different,
 # but they refer to the same object, 
-# so their object id is the same. They are the sameobject.
+# so their object id is the same. They are the same object.
 a = Object.new
 b = a
-puts "a's id id #{a.object_id} and b's id is #{b.object_id}."
+puts "a's id is #{a.object_id} and b's id is #{b.object_id}."
 
 # Some times, two object look like the same, but they are different objects.
 string1 = "hello"
