@@ -22,6 +22,18 @@ public class Case04JavaBasicDataType {
 		
 		percent = 100*error/total;
 		System.out.println(percent + "%");
+		
+		// long:-2^63 ~ 2^63-1
+		long l2 = 10000000000l;
+		
+		long distance1 = 10000 * 365 * 24 * 60 * 60;
+		System.out.println("distance1: " + distance1);
+		System.out.println(distance1 + l2);
+		
+		long time = System.currentTimeMillis();
+		System.out.println(time);
+		
+		//double:
 	}
 
 }
