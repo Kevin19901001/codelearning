@@ -34,6 +34,14 @@ public class Case04JavaBasicDataType {
 		System.out.println(time);
 		
 		//double:
+		double pi = 3.14;
+		double r = 8;
+		double s = pi * r * r;
+		System.out.println(s);
+		
+		double money = 3.0;
+		double price = 2.9;
+		System.out.println(money - price);				// 0.10000000000000009
 	}
 
 }
