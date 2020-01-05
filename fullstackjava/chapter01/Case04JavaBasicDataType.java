@@ -42,6 +42,22 @@ public class Case04JavaBasicDataType {
 		double money = 3.0;
 		double price = 2.9;
 		System.out.println(money - price);				// 0.10000000000000009
+		
+		// char:
+		char c1 = '中';
+		char c2 = '\u4e2d';
+		System.out.println(c1);
+		System.out.println(c2);
+		
+		char c3 = 65;
+		char c4 = 'A';
+		char c5 = '\u0041';
+		System.out.println(c3);
+		System.out.println(c4);
+		System.out.println(c5);
+		
+		char c6 = '\\';
+		System.out.println(c6);							// \
 	}
 
 }
