@@ -58,6 +58,11 @@ public class Case04JavaBasicDataType {
 		
 		char c6 = '\\';
 		System.out.println(c6);							// \
+		
+		// boolean:
+		int age = 18;
+		boolean isChild = age<16;
+		System.out.println(isChild);
 	}
 
 }
