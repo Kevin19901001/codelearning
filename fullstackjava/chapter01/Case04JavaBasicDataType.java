@@ -63,6 +63,25 @@ public class Case04JavaBasicDataType {
 		int age = 18;
 		boolean isChild = age<16;
 		System.out.println(isChild);
+		
+		// data type transformation:
+		int i1 = 100;
+		int i2 = 100;
+		long ll1 = i1 + i2;
+		System.out.println(ll1);
+		
+		long ll2 = 1024;
+		int i3 = (int)ll2;
+		System.out.println(i3);								// 1024
+		
+		long ll3 = 1024 * 1024 * 1024 * 4L;
+		int i4 = (int)ll3;
+		System.out.println(i4);								// 0(overflow)
+		
+		double d1 = 3.1415926535897932384;
+		float f1 = (float)d1;
+		System.out.println(f1);							// 3.1415927(precision lost)
+		
 	}
 
 }
