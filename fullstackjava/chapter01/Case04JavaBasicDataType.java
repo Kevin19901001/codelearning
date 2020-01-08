@@ -82,6 +82,18 @@ public class Case04JavaBasicDataType {
 		float f1 = (float)d1;
 		System.out.println(f1);							// 3.1415927(precision lost)
 		
+		// auto transformation:
+		long distance2 = 10000 * 365 * 24 * 60 * 60 * 299792458l;
+		System.out.println(distance2);
+		
+		double change = 800 - 299.0;
+		System.out.println(change);
+		
+		double persent = 80/100;
+		System.out.println(persent);						// 0.0
+		
+		double persent2 = 80.0/100;
+		System.out.println(persent2);						// 0.8
 	}
 
 }
