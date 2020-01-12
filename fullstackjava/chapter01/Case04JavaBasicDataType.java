@@ -23,7 +23,7 @@ public class Case04JavaBasicDataType {
 		percent = 100*error/total;
 		System.out.println(percent + "%");
 		
-		// long:-2^63 ~ 2^63-1
+		// long: -2^63 ~ 2^63-1
 		long l2 = 10000000000l;
 		
 		long distance1 = 10000 * 365 * 24 * 60 * 60;
@@ -94,6 +94,16 @@ public class Case04JavaBasicDataType {
 		
 		double persent2 = 80.0/100;
 		System.out.println(persent2);						// 0.8
+		
+		// %:
+		int n = 225;
+		System.out.println(n%8);							// 1
+		
+		// ++ and --:
+		int aa = 10, bb = 20;
+		int cc1 = aa++;
+		int cc2 = ++bb;
+		System.out.println("aa:" + aa + " bb:" + bb + " cc1:" + cc1 + " cc2:" + cc2);	// aa:11 bb:21 cc1:10 cc2:21
 	}
 
 }
