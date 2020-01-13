@@ -36,9 +36,27 @@ public class Case05OperatorAndExpression {
 		System.out.println(b4);
 		System.out.println(x);
 		
-		boolean b5 = (x > 0) || (y++ > 200);				// (x > 0) is true , then (y++ > 200) will not be operated
+		boolean b5 = (x > 0) || (y++ > 200);			// (x > 0) is true , then (y++ > 200) will not be operated
 		System.out.println(b5);
 		System.out.println(y);
+		
+		// assignment operator:
+		int num1 = 18, index;
+		System.out.println(index=num1%5);
+		System.out.println(index);
+		
+		int o = 100;
+		String msg = "o=" + o;
+		System.out.println(msg);
+		msg = "" + 100 + 200;
+		System.out.println(msg);						// 100200
+		msg = 100 + 200 + "";
+		System.out.println(msg);						// 300
+		
+		// +:
+		
+		// condition operator:
+		
 	}
 
 }
