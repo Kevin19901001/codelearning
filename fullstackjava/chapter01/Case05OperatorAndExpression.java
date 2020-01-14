@@ -56,7 +56,9 @@ public class Case05OperatorAndExpression {
 		// +:
 		
 		// condition operator:
-		
+		int j = 100, k = 200;
+		int flag1 = j > k ? 1 : -1;
+		System.out.println(flag1);						// -1
 	}
 
 }
