@@ -44,7 +44,8 @@ public class Case05OperatorAndExpression {
 		int num1 = 18, index;
 		System.out.println(index=num1%5);
 		System.out.println(index);
-		
+
+		// +:
 		int o = 100;
 		String msg = "o=" + o;
 		System.out.println(msg);
@@ -53,9 +54,7 @@ public class Case05OperatorAndExpression {
 		msg = 100 + 200 + "";
 		System.out.println(msg);						// 300
 		
-		// +:
-		
-		// condition operator:
+		// 3 eyes operator:
 		int j = 100, k = 200;
 		int flag1 = j > k ? 1 : -1;
 		System.out.println(flag1);						// -1
