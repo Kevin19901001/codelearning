@@ -10,6 +10,15 @@ public class Case07LoopStrcuture {
 			age++;
 		}
 		
+		int x = 0;
+		while (x < 10) {
+			if (x == 5) {
+				break;
+			}
+			System.out.println(x);
+			x++;
+		}
+		
 		// do...while...
 		
 		// for:
