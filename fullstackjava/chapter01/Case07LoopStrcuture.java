@@ -1,5 +1,7 @@
 package chapter01;
 
+import java.util.Scanner;
+
 public class Case07LoopStrcuture {
 
 	public static void main(String[] args) {
@@ -20,6 +22,13 @@ public class Case07LoopStrcuture {
 		}
 		
 		// do...while...
+		Scanner scanner = new Scanner(System.in);
+		int pwd;
+		do {
+			System.out.print("passwrod:");
+			pwd = scanner.nextInt();
+		} while (123456 != pwd);
+		scanner.close();
 		
 		// for:
 		
