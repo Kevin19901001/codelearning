@@ -18,8 +18,16 @@ public class Case08ArrayIntroduction {
 		System.out.println("数组的长度为：" + length);
 		
 		// access array through index:
+		int[] arr4 = new int[] {4, 5, 6, 8};
+		int temp = arr4[2];
+		arr4[2] = arr4[3];
+		arr4[3] = temp;
+		System.out.println(arr4);
 		
 		// iterate elements from array:
+		for (int i = 0; i < arr4.length; i++) {
+			System.out.println(arr4[i]);
+		}
 		
 		// copy array:
 		
