@@ -29,7 +29,12 @@ public class Case08ArrayIntroduction {
 			System.out.println(arr4[i]);
 		}
 		
-		// copy array:
+		int[] arr5 = new int[] {10, 20, 30, 40, 50};
+		for (int i = (arr5.length-1); i >= 0; i--) {
+			System.out.println(arr5[i]);
+		}
+		
+		// copy array:System.arraycopy(src, srcPos, dest, destPos, length);
 		
 		// sort array:
 	}
