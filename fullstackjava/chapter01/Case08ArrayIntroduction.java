@@ -35,6 +35,38 @@ public class Case08ArrayIntroduction {
 		}
 		
 		// copy array:System.arraycopy(src, srcPos, dest, destPos, length);
+		int[] arr6 = {10, 20, 30, 40, 50};
+		for (int i = 0; i < arr6.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + arr6[i] + ", ");
+			} else if (i == (arr6.length - 1)) {
+				System.out.print(arr6[i] + "]");
+			} else {
+				System.out.print(arr6[i] + ", ");
+			}
+		}
+		System.out.print("\n");
+		int[] arr7 = new int[6];
+		for (int i = 0; i < arr7.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + arr7[i] + ", ");
+			} else if (i == (arr7.length - 1)) {
+				System.out.print(arr7[i] + "]");
+			} else {
+				System.out.print(arr7[i] + ", ");
+			}
+		}
+		System.out.print("\n");
+		System.arraycopy(arr6, 1, arr7, 0, 4);
+		for (int i = 0; i < arr7.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + arr7[i] + ", ");
+			} else if (i == (arr7.length - 1)) {
+				System.out.print(arr7[i] + ", ");
+			} else {
+				System.out.print(arr7[i] + ", ");
+			}
+		}
 		
 		// sort array:
 	}
