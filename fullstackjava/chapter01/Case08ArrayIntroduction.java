@@ -1,5 +1,7 @@
 package chapter01;
 
+import java.util.Arrays;
+
 public class Case08ArrayIntroduction {
 
 	public static void main(String[] args) {
@@ -62,9 +64,23 @@ public class Case08ArrayIntroduction {
 			if (i == 0) {
 				System.out.print("[" + arr7[i] + ", ");
 			} else if (i == (arr7.length - 1)) {
-				System.out.print(arr7[i] + ", ");
+				System.out.print(arr7[i] + "]");
 			} else {
 				System.out.print(arr7[i] + ", ");
+			}
+		}
+		
+		// Arrays.copyOf
+		int[] arr8 = {100, 200, 300, 400, 500};
+		int[] arr9 = Arrays.copyOf(arr8, 6);
+		System.out.print("\narr9: ");
+		for (int i = 0; i < arr9.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + arr9[i] + ", ");
+			} else if (i == (arr9.length - 1)) {
+				System.out.print(arr9[i] + "]");
+			} else {
+				System.out.print(arr9[i] + ", ");
 			}
 		}
 		
