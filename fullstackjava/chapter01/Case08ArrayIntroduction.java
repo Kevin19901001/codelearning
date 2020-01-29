@@ -84,6 +84,20 @@ public class Case08ArrayIntroduction {
 			}
 		}
 		
+		// array dilatation:
+		int[] arr10 = {21, 23, 25, 27, 29};
+		int[] arr11 = Arrays.copyOf(arr10, arr10.length + 2);
+		System.out.print("\narr11: ");
+		for (int i = 0; i < arr11.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + arr11[i] + ", ");
+			} else if (i == (arr11.length - 1)) {
+				System.out.print(arr11[i] + "]");
+			} else {
+				System.out.print(arr11[i] + ", ");
+			}
+		}
+		
 		// sort array:
 	}
 
