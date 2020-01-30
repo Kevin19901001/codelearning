@@ -2,6 +2,8 @@ package chapter01;
 
 import java.util.Arrays;
 
+import utils.ArrayAsString;
+
 public class Case08ArrayIntroduction {
 
 	public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class Case08ArrayIntroduction {
 			System.out.println(arr5[i]);
 		}
 		
-		// copy array:System.arraycopy(src, srcPos, dest, destPos, length);
+		// copy array:System.arraycopy(source, srcPos, destination, destPos, length);
 		int[] arr6 = {10, 20, 30, 40, 50};
 		for (int i = 0; i < arr6.length; i++) {
 			if (i == 0) {
@@ -99,6 +101,10 @@ public class Case08ArrayIntroduction {
 		}
 		
 		// sort array:
+		int[] arr12 = {10, 34, 55, 3, 89, 12, 51, 14, 37, 18, 9};
+		Arrays.sort(arr12);
+		System.out.print("\narr12: ");
+		ArrayAsString.printArray(arr12);
 	}
 
 }
