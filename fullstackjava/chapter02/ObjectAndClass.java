@@ -1,6 +1,6 @@
 package chapter02;
 
-public class ObjectAndClass {
+public class Case01ObjectAndClass {
 
 	public static void main(String[] args) {
 		// Object oriented programming:
@@ -54,6 +54,19 @@ public class ObjectAndClass {
 		// 5.Null and NullPionterException:
 		// Emp emp = null;
 		// emp.setAge(12);	// NullPointerException
+		
+		
+		// practice: pint emp info:
+		Emp emp = new Emp();
+		emp.name = "Hovered";
+		emp.age = 45;
+		emp.gender = 'M';
+		emp.salary = 4500.00;
+		emp.printInfo();
+		
+		// salary up:
+		emp.salary *= 150.0/100;
+		emp.printInfo();
 	}
 
 }
@@ -107,6 +120,17 @@ class Emp {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+	
+	/**
+	 * print emp info
+	 */
+	public void printInfo() {
+		System.out.println("----------------");
+		System.out.println("NAME: " + name);
+		System.out.println("AGE: " + age);
+		System.out.println("GENDER: " + gender);
+		System.out.println("SALARY: " + salary);
 	}
 	
 }
