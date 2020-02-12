@@ -27,8 +27,17 @@ public class Case03MemoryAndInheritence {
 		jf1.setSize(200, 300);
 		jf2.setSize(400, 500);
 		
-		
-		// 2.Inheritance:
 	}
 
+}
+
+
+// 2.Inheritance:
+// Keyword 'extends':
+class Animal {
+	public Animal() {}
+}
+
+class Cat extends Animal {
+	public Cat() {}
 }
