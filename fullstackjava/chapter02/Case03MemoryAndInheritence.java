@@ -20,7 +20,7 @@ public class Case03MemoryAndInheritence {
 		// Member variable: defined in class, out of method, with defaut value;
 		// existed in heap when create object of class.
 		
-		// Method area: store class info;
+		// Method area: store class info
 		// Just one method:
 		JFrame jf1 = new JFrame();
 		JFrame jf2 = new JFrame();
