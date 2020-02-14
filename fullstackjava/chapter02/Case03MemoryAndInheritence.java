@@ -24,7 +24,7 @@ public class Case03MemoryAndInheritence {
 		// Just one method:
 		JFrame jf1 = new JFrame();
 		JFrame jf2 = new JFrame();
-		jf1.setSize(200, 300);
+		jf1.setSize(100, 300);
 		jf2.setSize(400, 500);
 		
 	}
