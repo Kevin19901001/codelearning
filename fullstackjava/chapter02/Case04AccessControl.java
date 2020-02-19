@@ -54,8 +54,16 @@ public class Case04AccessControl {
 		
 		System.out.println(length);
 		
+		// static代码块：属于类的代码块，在类的加载期间只执行1次，可以用来在软件中加载静态资源
+		StaticSample ss = new StaticSample();
+		System.out.println(ss.getClass());
+		
 
 		// final:
+		// final修饰成员变量，意为不可改变
+		// final修饰的方式不可被重写
+		// final修饰的类不可被继承
+		// static final修饰的成员变量称为常量，必须声明同时被初始化，不可改变。
 	}
 
 }
@@ -104,5 +112,21 @@ class Pet {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+}
+
+/**
+ * Test static
+ * 
+ * @author Administrator
+ * @since 2020-02-19
+ */
+class StaticSample {
+	static {
+		System.out.println("Load StaticSample.class");
+	}
+
+	public StaticSample() {
+		System.out.println("StaticSample()");
 	}
 }
