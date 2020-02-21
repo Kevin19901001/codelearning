@@ -15,6 +15,18 @@ public class Case05AbstractClassAndInterface {
 		// 封装子类中的重要内容（成员变量和方法）
 		// 定义有抽象方法，子类虽然有不同的实现，但该方法的定义是一致的的。
 
+		
+		// 1.2.2 实现接口
+		// 接口可以作为一种类型声明变量，一个接口类型的变量可以引用实现了该接口的类的对象；
+		// 通过该变量可以调用，该接口中定义的方法。
+		Runner runner = new AmericanCurl();
+		System.out.println(runner.getClass());
+		
+		// 1.2.3 接口的继承：
+		Hunter hunter = new AfricanCurl();
+		hunter.run();
+		hunter.hunt();
+		
 	}
 
 }
@@ -89,4 +101,61 @@ class Circle extends Shape {
 		// TODO Auto-generated method stub
 		return 0.325 * c * c;
 	}
+}
+
+/**
+ * 1.2.1. 定义一个接口
+ * 
+ * @author HuanQing
+ * @since 2020-02-21
+ */
+interface Runner {
+	public static int DEFAULT_SPEED = 100;
+
+	public void run();
+}
+
+/**
+ * 1.2.2 实现接口
+ * 
+ * @author HuanQing
+ * @since 2020-02-21
+ */
+class AmericanCurl implements Runner {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("run...");
+	}
+
+}
+
+/**
+ * 1.2.3 接口的继承
+ * 
+ * @author HuanQing
+ * @since 2020-02-21
+ */
+interface Hunter extends Runner {
+	
+	public void hunt();
+	
+}
+
+class AfricanCurl implements Hunter {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("run...");
+	}
+
+	// AfricanCurl类必须实现Runner接口及其父接口Hunter中的方法
+	@Override
+	public void hunt() {
+		// TODO Auto-generated method stub
+		System.out.println("hunt...");
+	}
+	
 }
