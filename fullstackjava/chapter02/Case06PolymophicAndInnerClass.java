@@ -10,7 +10,7 @@ public class Case06PolymophicAndInnerClass {
 
 	public static void main(String[] args) {
 		/**
-		 * 1 polymophic: 1.1.1 多态的意义： 一个类型的引用在指向不同的对象时会有不同的实现； 同一个对象，造型成不同的类型时，会有不同的功能。
+		 * 1.1 多态: 1.1.1 多态的意义： 一个类型的引用在指向不同的对象时会有不同的实现； 同一个对象，造型成不同的类型时，会有不同的功能。
 		 */
 		Player bp = new BasketballPlayer();
 		Player co = new Coach();
@@ -37,9 +37,12 @@ public class Case06PolymophicAndInnerClass {
 		System.out.println(co instanceof Coach);
 
 		/**
-		 * 2. inner class
+		 * 1.2 内部类
+		 *
+		 * 1.2.2 创建内部类对象
 		 */
-
+		Outer outer = new Outer(100);
+		outer.printTime();				// 101
 	}
 
 }
@@ -82,6 +85,85 @@ class Coach implements Player {
 	public void play() {
 		// TODO Auto-generated method stub
 		System.out.println("coaching player...");
+	}
+
+}
+
+/**
+ * 1.2.1 定义成员内部类 一个类可以定义在另一个类的内部，定义在类内部的类称之为Inner，其所在的类称为Outer。
+ * Inner在Outer的内部。通常只服务于Outer，对外部不具备可见性，Inner可以直接调用Outer的成员及方法（包括私有的）。
+ * 
+ * @author HuanQing
+ * @since 2020-02-23
+ */
+class Outer {
+	private int time;
+
+	private Inner inner;
+
+	/**
+	 * 构造器
+	 * 
+	 * @param time
+	 */
+	public Outer(int time) {
+		super();
+		this.time = time;
+		this.inner = new Inner();
+		inner.timeInc();
+	}
+
+	/**
+	 * 打印时间
+	 */
+	public void printTime() {
+		System.out.println(time);
+	}
+
+	/**
+	 * 内部类
+	 * 
+	 * @author HuanQing
+	 * @since 2020-02-23
+	 */
+	class Inner {
+		public void timeInc() {
+			time++;
+		}
+	}
+}
+
+/**
+ * 1.2.2 定义匿名内部类
+ * 
+ * @author HuanQing
+ * @since 2020-02-23
+ */
+interface Action {
+	public void exec();
+}
+
+/**
+ * 1.2.2 如果在一段程序中，需要创建一个类的对象（通常这个类需要继承某个接口或者实现某个类），
+ * 而且创建对象后，这个类的价值也就不存在了，这个类可以不必命名，称为匿名内部类。
+ * 
+ * @author Administrator
+ * @since 2020-02-23
+ */
+class Main {
+
+	public static void main(String[] args) {
+		Action action = new Action() {
+
+			@Override
+			public void exec() {
+				// TODO Auto-generated method stub
+				System.out.println("In anonymous inner class, override unimplemented methdo!");
+			}
+
+		};
+
+		action.exec();
 	}
 
 }
