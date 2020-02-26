@@ -1,4 +1,4 @@
-package chapter03;
+﻿package chapter03;
 
 import org.junit.Test;
 
@@ -116,4 +116,18 @@ public class Case01APIDocAndStringOperation {
 		System.out.println(userName.length());	// 8
 		System.out.println(userName);			// good man
 	}
+	
+	/**
+	 * cahrAt()
+	 * 遍历一个字符串中的字符序列
+	 */
+	@Test
+	public void testCahrAt() {
+		String str = "Whatisjava";
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			System.out.print(c + " ");
+		}
+	}
+	
 }
