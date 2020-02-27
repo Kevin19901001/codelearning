@@ -106,7 +106,7 @@ public class Case01APIDocAndStringOperation {
 	}
 	
 	/**
-	 * trim
+	 * 2.1.6 trim()
 	 * 去掉一个字符串的前导和后续空字符
 	 */
 	@Test
@@ -118,7 +118,7 @@ public class Case01APIDocAndStringOperation {
 	}
 	
 	/**
-	 * cahrAt()
+	 * 2.1.7 cahrAt()
 	 * 遍历一个字符串中的字符序列
 	 */
 	@Test
