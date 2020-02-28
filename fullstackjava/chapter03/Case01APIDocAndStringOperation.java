@@ -130,4 +130,15 @@ public class Case01APIDocAndStringOperation {
 		}
 	}
 	
+	/**
+	 * 2.1.8 startsWith()和endsWith()
+	 */
+	@Test
+	public void testStartWithAndEndWith() {
+		String str = "Think in Java";
+		System.out.println(str.startsWith("Think"));	// true
+		System.out.println(str.endsWith("Java"));		// true
+		System.out.println(str.endsWith("in"));			// false
+	}
+	
 }
