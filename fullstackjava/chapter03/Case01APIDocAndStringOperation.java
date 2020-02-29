@@ -141,4 +141,14 @@ public class Case01APIDocAndStringOperation {
 		System.out.println(str.endsWith("in"));			// false
 	}
 	
+	/**
+	 * 2.1.9 大小写转换
+	 */
+	@Test
+	public void testToUpperCaseAndToLowerCase() {
+		String str = "我喜欢Java";
+		
+		System.out.println(str.toUpperCase());
+		System.out.println(str.toLowerCase());
+	}
 }
