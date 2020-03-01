@@ -151,4 +151,24 @@ public class Case01APIDocAndStringOperation {
 		System.out.println(str.toUpperCase());
 		System.out.println(str.toLowerCase());
 	}
+	
+	/**
+	 * 2.1.10 valueOf()
+	 */
+	@Test
+	public void testValueOf() {
+		double pi = 3.1415926;
+		int value = 132;
+		char[] charArr = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
+		
+		String str = String.valueOf(pi);
+		System.out.println(str);
+		
+		str = String.valueOf(value);
+		System.out.println(str);
+		
+		str = String.valueOf(charArr);
+		System.out.println(str);
+		
+	}
 }
