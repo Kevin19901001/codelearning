@@ -171,4 +171,28 @@ public class Case01APIDocAndStringOperation {
 		System.out.println(str);
 		
 	}
+	
+	
+	/**
+	 * 2.2 StringBuilder及其API
+	 * 2.2.1 StringBuilder封装可变字符串
+	 * 对象创建后，可以通过调用方法改变其封装的字符序列
+	 * 常用的构造方法：
+	 * public StringBuilder()
+	 * public StringBuilder(str)
+	 */
+	
+	/**
+	 * 2.2.2 常用方法：
+	 * StringBuilder append(str)
+	 * StringBuilder insert(int dstoffset, String s)
+	 * StringBuilder delete(int start, int end)
+	 * StringBuilder replace(int start, int end, String str)
+	 * StringBuilder reaverse()
+	 */
+	
+	/**
+	 * 2.2.3 StringBuilder
+	 * 
+	 */
 }
