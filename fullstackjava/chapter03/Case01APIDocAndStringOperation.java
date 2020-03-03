@@ -193,6 +193,7 @@ public class Case01APIDocAndStringOperation {
 	
 	/**
 	 * 2.2.3 StringBuilder
-	 * 
+	 * StringBuilder的很多方法返回值均为StringBuilder类型，这些方法的返回语句均为：return this
+	 * 由于改变封装的字符序列后又返回了该对象的引用，可以按照简介的方式书写代码
 	 */
 }
