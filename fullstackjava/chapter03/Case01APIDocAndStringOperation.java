@@ -216,4 +216,14 @@ public class Case01APIDocAndStringOperation {
 		buf.insert(9, "php");
 		System.out.println(buf);
 	}
+	
+	/**
+	 * 2.2.6 delete()方法
+	 */
+	@Test
+	public void testDelete() {
+		StringBuilder buf = new StringBuilder("javaoraclecppc#php");
+		buf.delete(4, 4+6);
+		System.out.println(buf);
+	}
 }
