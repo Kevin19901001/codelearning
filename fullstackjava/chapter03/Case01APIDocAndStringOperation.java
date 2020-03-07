@@ -10,7 +10,6 @@ import org.junit.Test;
 public class Case01APIDocAndStringOperation {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		/**
 		 * 1.1 JDK API
@@ -225,5 +224,23 @@ public class Case01APIDocAndStringOperation {
 		StringBuilder buf = new StringBuilder("javaoraclecppc#php");
 		buf.delete(4, 4+6);
 		System.out.println(buf);
+	}
+	
+	/**
+	 * 2.2.7 StringBuilder总结
+	 * StringBuilder是可变字符串。字符串的内容计算，建议采用StringBuilder实现，这样性能会好一些；
+	 * Java的字符串连接的过程是采用StringBuilder实现的。
+	 * 
+	 * StringBuffer和StringBuilder:
+	 * StringBuffer是线程安全的，同步处理的，性能稍慢；
+	 * StringBuilder是非线程安全的，并发处理的，性能稍快。
+	 */
+	@Test
+	public void testStringBuilder() {
+		String s1 = "AB";
+		String s2 = s1 +"DE" + 1;
+		String s3 = new StringBuilder(s1).append("DE").append(1).toString();
+		System.out.println(s2);
+		System.out.println(s3);
 	}
 }
