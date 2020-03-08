@@ -1,246 +1,73 @@
 ﻿package chapter03;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
-/**
- * Java API文档和字符串基本操作
- * @author HuanQing
- * @since 2020-02-23
- */
-public class Case01APIDocAndStringOperation {
+public class Case02RegExpAndWrapperClass {
 
 	public static void main(String[] args) {
+		// 1. 正则表达式
+		// 1.1 基本正则表达式
+		// 1.1.1 正则表达式简介：
+		// “[a-z]”表示'a'到'z'的任意一个字符；
+		// “[a-z]+”表示由1个或多个a-z字符组成的字符串；
+		// “[abc]”表示abc中任意一个字符；
+		// “{^abc}”表示出abc之外的任意字符；
+		// “[a-zA-Z0-9]”表示a~z、A~Z、0～9中任意一个字符；
+		//  “[a-z&&[^bc]]”表示a~z中除了bc外的任意一个字符；
+		// “.”表示任意一个字符；
+		// “\d”任意一个数字字符，相当于[0-9]；
+		//  “\w”单词字符，相当于[a-zA-Z0-9_]；
+		// “\s”表示空白字符，相当于：[\t\n\x0B\f\r]
+		// “\D”表示非数字字符；
+		// “\W”表示非单词字符；
+		// “\S”表示非空白字符；
+		// “X?”表示0个或1个X；
+		// “X*”表示0个或多个X；
+		// “X+”表示1个或多个X；
+		// “X{n}”表示n个X；
+		// “X{n, }”表示n到任意多个X；
+		// “X{n, m}”表示n到m个X
+		// 检索邮政编码：\d{6}
 		
-		/**
-		 * 1.1 JDK API
-		 * 1.1.1 什么是JDK API：JDK中包含大量的API类库，JDK中包含的类库功能强大，经常使用的有：
-		 * 字符串操作，集合操作，文件操作，输入输出操作，网络操作，多线程等等。
-		 * 1.1.2 JDK包结构：java.lang, java.util, java.io, java.net, java.math, java.security, java.sql, java.text...
-		 */
+		// 1.1.2 分组()：()表示分组，可以将一系列正则表达式看作是一个整体，分组时可以使用“|”表示“或”关系。
+		// 匹配手机号码前面的区号：(+86|0086)?\s?\d{11}
+
+		// 1.1.3 ^和$：
+		// ^代表字符串开始
+		// $代表字符串结尾
+		// 匹配用户名规则-从头到尾连续8~10个单词字符：
+		System.out.println("abcd1234_abcd".matches("^\\w{8,10}$"));		// true
+		System.out.println("abcd1234_abcd".matches("\\w{8,10}"));			// false
 		
-		
-		/**
-		 * 1.2 文档注释规范：
-		 * 1.2.1 文档注释
-		 * 1.2.2 文档注释规范
-		 * 1.2.3 javadoc命令生成文档
-		 */
-		
-		
-		/**
-		 * 2.1 String及其常用API：
-		 * 2.1.1 String是不可变对象：String使用了final修饰，不可被继承；
-		 * 字符串底层封装了字符数组及针对字符数组的操作算法；
-		 * 字符串一旦创建，对象永远无法改变，但字符串引用可以重新赋值；
-		 * Java字符串在内存中采用Unicode编码方式，任何一个字符对应两个字节的定长编码。
-		 */
-		
-		
-		/**
-		 * 2.1.2 String常量池：
-		 * Java为了提高性能，静态字符床（字面量、常量、常量连接的结果）在常量池中创建，并尽量使用同一个对象，重用静态字符串。
-		 */
-	}
-	
-	/**
-	 * 2.1.2 测试String常量池
-	 */
-	@Test
-	public void testConstantPool() {
-		String str1 = "Hello";
-		
-		// 不会创建新的对象，而是创建常量池中已有的"Hello":
-		String str2 = "Hello";
-		System.out.println(str1 == str2);		// true
-		
-		// 使用new关键字会创建新的String对象：
-		String str3 = new String("Hello");
-		System.out.println(str1 == str3);		// false
-	}
-	
-	/**
-	 * 2.1.3 内存编码及长度
-	 * String在内存中采用unicode编码，每个字符占用2个字节，任何一个字符（不论中文还是英文），都算一个字符长度，占用两个字节。
-	 */
-	@Test
-	public void testLength() {
-		String str1 = "Hello";
-		System.out.println(str1.length());		// 5
-		
-		String str2 = "你好，String!";
-		System.out.println(str2.length());		// 10
-	}
-	
-	/**
-	 * 2.1.4 使用indexOf()方法实现检索
-	 * indexOf方法用于在字符串中检索另一个字符串
-	 */
-	@Test
-	public void testIndexOf() {
-		String str = "I can because I think I can";
-		int index = str.indexOf("can");
-		System.out.println(index);				// 2
-		
-		index = str.lastIndexOf("can");			// 24
-		System.out.println(index);
-		
-		index = str.indexOf("can", 6);
-		System.out.println(index);				// 18
-		
-		index = str.indexOf("Can");
-		System.out.println(index);				// -1
-	}
-	
-	/**
-	 * 2.1.5 使用substring获取子串
-	 */
-	@Test
-	public void testSubstring() {
-		String str = "http://www.oracle.com";
-		String subString = str.substring(11, 17);
-		System.out.println(subString);			// oracle
-		
-		subString = str.substring(7);
-		System.out.println(subString);			// www.oracle.com
-	}
-	
-	/**
-	 * 2.1.6 trim()
-	 * 去掉一个字符串的前导和后续空字符
-	 */
-	@Test
-	public void testTrim() {
-		String userName = "  good man ";
-		userName = userName.trim();
-		System.out.println(userName.length());	// 8
-		System.out.println(userName);			// good man
-	}
-	
-	/**
-	 * 2.1.7 cahrAt()
-	 * 遍历一个字符串中的字符序列
-	 */
-	@Test
-	public void testCahrAt() {
-		String str = "Whatisjava";
-		for (int i = 0; i < str.length(); i++) {
-			char c = str.charAt(i);
-			System.out.print(c + " ");
-		}
-	}
-	
-	/**
-	 * 2.1.8 startsWith()和endsWith()
-	 */
-	@Test
-	public void testStartWithAndEndWith() {
-		String str = "Think in Java";
-		System.out.println(str.startsWith("Think"));	// true
-		System.out.println(str.endsWith("Java"));		// true
-		System.out.println(str.endsWith("in"));			// false
-	}
-	
-	/**
-	 * 2.1.9 大小写转换
-	 */
-	@Test
-	public void testToUpperCaseAndToLowerCase() {
-		String str = "我喜欢Java";
-		
-		System.out.println(str.toUpperCase());
-		System.out.println(str.toLowerCase());
-	}
-	
-	/**
-	 * 2.1.10 valueOf()
-	 */
-	@Test
-	public void testValueOf() {
-		double pi = 3.1415926;
-		int value = 132;
-		char[] charArr = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
-		
-		String str = String.valueOf(pi);
-		System.out.println(str);
-		
-		str = String.valueOf(value);
-		System.out.println(str);
-		
-		str = String.valueOf(charArr);
-		System.out.println(str);
 		
 	}
 	
-	
 	/**
-	 * 2.2 StringBuilder及其API
-	 * 2.2.1 StringBuilder封装可变字符串
-	 * 对象创建后，可以通过调用方法改变其封装的字符序列
-	 * 常用的构造方法：
-	 * public StringBuilder()
-	 * public StringBuilder(str)
-	 */
-	
-	/**
-	 * 2.2.2 常用方法：
-	 * StringBuilder append(str)
-	 * StringBuilder insert(int dstoffset, String s)
-	 * StringBuilder delete(int start, int end)
-	 * StringBuilder replace(int start, int end, String str)
-	 * StringBuilder reaverse()
-	 */
-	
-	/**
-	 * 2.2.3 StringBuilder
-	 * StringBuilder的很多方法返回值均为StringBuilder类型，这些方法的返回语句均为：return this
-	 * 由于改变封装的字符序列后又返回了该对象的引用，可以按照简介的方式书写代码
-	 */
-	
-	/**
-	 * 2.2.4 append()方法
+	 * 1.2 String正则API：
+	 * 1.2.1 match(String regexp)方法
 	 */
 	@Test
-	public void testAppend() {
-		StringBuilder buf = new StringBuilder("Programming language:");
-		buf.append("Java").append("Python").append("C++");
-		System.out.println(buf.toString());
+	public void email() {
+		String emailRegexp = "^[a-zA-Z0-9_.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z0-9] {2,4}$";
+		String email = "abc@souhu.com.cn";
+		System.out.println(email.matches(emailRegexp));								// true
 	}
 	
 	/**
-	 * 2.2.5 insert()方法
+	 * 1.2.2 String[] split(String regexp)方法
 	 */
 	@Test
-	public void testInsert() {
-		StringBuilder buf = new StringBuilder("javacppc#objective-c");
-		buf.insert(9, "php");
-		System.out.println(buf);
-	}
-	
-	/**
-	 * 2.2.6 delete()方法
-	 */
-	@Test
-	public void testDelete() {
-		StringBuilder buf = new StringBuilder("javaoraclecppc#php");
-		buf.delete(4, 4+6);
-		System.out.println(buf);
-	}
-	
-	/**
-	 * 2.2.7 StringBuilder总结
-	 * StringBuilder是可变字符串。字符串的内容计算，建议采用StringBuilder实现，这样性能会好一些；
-	 * Java的字符串连接的过程是采用StringBuilder实现的。
-	 * 
-	 * StringBuffer和StringBuilder:
-	 * StringBuffer是线程安全的，同步处理的，性能稍慢；
-	 * StringBuilder是非线程安全的，并发处理的，性能稍快。
-	 */
-	@Test
-	public void testStringBuilder() {
-		String s1 = "AB";
-		String s2 = s1 +"DE" + 1;
-		String s3 = new StringBuilder(s1).append("DE").append(1).toString();
-		System.out.println(s2);
-		System.out.println(s3);
+	public void testSplit() {
+		// 按空格拆分
+		String langs = "java cpp php c# objective-c";
+		String[] langsArr = langs.split("\\s");
+		System.out.println(Arrays.toString(langsArr));
+		
+		// 按"+"、"-"、"="拆分
+		String line = "100+200-150-150";
+		String[] arr = line.split("[\\+\\-=]");
+		System.out.println(Arrays.toString(arr));
 	}
 }
