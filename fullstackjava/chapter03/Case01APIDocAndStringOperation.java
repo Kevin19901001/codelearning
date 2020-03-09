@@ -42,6 +42,19 @@ public class Case02RegExpAndWrapperClass {
 		System.out.println("abcd1234_abcd".matches("\\w{8,10}"));			// false
 		
 		
+		// 2. Object
+		// 2.1 Object
+		// 2.1.1 Object：在Java类继承结构中，java.lang.Object类位于顶端。如果定义一个Java类时，没有使用extends关键字声明其父类，则其父类默认为java.lang.Object类。
+		// Object类型的引用变量可以指向任何类型的对象。
+		
+		// 2.2 toString()方法
+		// 2.2.1 如何重写toString()方法：Object类中的重要方法，用来表示对象值的字符串表示；原则上建议重写，格式大多数遵循“类的名字[域值]”
+		
+		// 2.2.2 String重写toString()方法：
+		// public String toString() {
+		//	 return this;
+		// }
+		
 	}
 	
 	/**
@@ -69,5 +82,15 @@ public class Case02RegExpAndWrapperClass {
 		String line = "100+200-150-150";
 		String[] arr = line.split("[\\+\\-=]");
 		System.out.println(Arrays.toString(arr));
+	}
+	
+	/**
+	 * 1.2.3 String replaceAll(String regexp, String replacement)方法
+	 */
+	@Test
+	public void testReplaceAll() {
+		String words = "abc123def456ghi89";
+		String newWords = words.replaceAll("\\d+", "数字");
+		System.out.println(newWords);
 	}
 }
