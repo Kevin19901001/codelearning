@@ -54,6 +54,15 @@ public class Case02RegExpAndWrapperClass {
 		// public String toString() {
 		//	 return this;
 		// }
+		// Java语言中很多地方会默认调用对象的toString()方法：1、字符串+对象，自动调用对象的toString()方法；2、System.out.println(对象)，自动调用对象的toString()方法
+		// 如果不重写toString()方法，将使用Object的toString()方法，其逻辑为类名+散列码。
+		// toString()方法是非常有用的调试工具；
+		// 强烈建议为自定义的所有类添加toString()方法。
+		
+		// String的toString()方法，就是将其自身返回：
+		// public String toString() {
+		// 	return this;
+		// }
 		
 	}
 	
