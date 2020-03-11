@@ -64,6 +64,39 @@ public class Case02RegExpAndWrapperClass {
 		// 	return this;
 		// }
 		
+		
+		// 2.3 equals()方法：
+		// 2.3.1 equals()方法是Object中，用于检测一个对象是否等于另一个对象的方法。在Object类中，这个方法判断两个对象是否具有相同的引用，即是否为相同的对象。
+		// 在实际应用中，一般需要重写该方法，通过比较对象的成员属性，使该方法更有意义。
+		
+		// 2.3.2 如何重写equals()方法：
+		//public boolean equals(Object obj) {
+		//	if() {
+		//		return false;
+		//	}else if() {
+		//		return false;
+		//	}else {
+		//		return true
+		//	}
+		//}
+		
+		// 2.3.3 String重写equals()方法：
+		//public class Demo{
+		//	public static void main(String[] args) {
+		//		String s1 = "abc";
+		//		String s2 = "abc";
+		//		String s3 = "ABC";
+		//		
+		//		System.out.println(s1.equals(s2));	// true
+		//		System.out.println(s1.equals(s3));	// false
+		//	}
+		//}
+		
+		// 2.3.4 equals()和==的区别：
+		// ==用于比较变量的值，可以应用于任何类型。如果用于引用类型，比较的是两个引用变量中存储的值（地址信息），判断两个变量是否指向相同的对象。
+		// equals()是Object的方法，重写以后，可用用于比较两个对象的“内容”是否相等；
+		// 需要注意的是，Object默认的equals()方法的比较规则同==
+		
 	}
 	
 	/**
