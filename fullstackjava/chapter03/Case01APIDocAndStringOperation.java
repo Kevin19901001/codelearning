@@ -97,6 +97,23 @@ public class Case02RegExpAndWrapperClass {
 		// equals()是Object的方法，重写以后，可用用于比较两个对象的“内容”是否相等；
 		// 需要注意的是，Object默认的equals()方法的比较规则同==
 		
+		
+		// 3. 包装类
+		// 3.1 包装类概述
+		// 3.1.1 包装类概述
+		// 在进行类型转换的范畴内，有一种特殊的转换，需要将int这样的基本数据类型转换为对象。
+		// 所有的基本类型都有一个与之对应的类，即包装类。
+		// 包装类是不可变类，在构造了包装类对象后，不允许改变包装在其中的值；
+		// 包装类是final的，不能定义它们的子类。
+		// int => java.lang.Integer
+		// long => java.lang.Long
+		// double => java.lang.Double
+		// float => java.lang.Float
+		// short => java.lang.Short
+		// byte => java.lang.Byte
+		// char => java.lang.Character
+		// boolean => java.lang.Boolean
+		
 	}
 	
 	/**
