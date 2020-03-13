@@ -114,6 +114,12 @@ public class Case02RegExpAndWrapperClass {
 		// char => java.lang.Character
 		// boolean => java.lang.Boolean
 		
+		
+		// 3.2 8种基本类型包装类
+		// 3.2.1 Number及其主要方法
+		// 抽象类Number是Byte, Double, Float, Integer, Short和Long类的父类。
+		// Number的子类必须提供将表示的数值转换为byte, double, float, int, long和short的方法。
+		
 	}
 	
 	/**
@@ -151,5 +157,26 @@ public class Case02RegExpAndWrapperClass {
 		String words = "abc123def456ghi89";
 		String newWords = words.replaceAll("\\d+", "数字");
 		System.out.println(newWords);
+	}
+	
+	/**
+	 * 3.2.1 Number及其主要方法
+	 */
+	@Test
+	public void testIntValueAndDoubleValue() {
+		Number d = 123.45;
+		Number n = 123;
+		
+		// 输出d和n对象所属的类型：
+		System.out.println(d.getClass().getName());	// java.lang.Double
+		System.out.println(n.getClass().getName());	// java.lang.Integer
+		
+		int intValue = d.intValue();
+		double doubleValue = d.doubleValue();
+		System.out.println(intValue + " , " + doubleValue);	// 123 , 123.45
+		
+		intValue = n.intValue();
+		doubleValue = n.doubleValue();
+		System.out.println(intValue + " , " + doubleValue);	// 123 , 123.0
 	}
 }
