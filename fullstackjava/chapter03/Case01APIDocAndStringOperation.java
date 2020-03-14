@@ -179,4 +179,21 @@ public class Case02RegExpAndWrapperClass {
 		doubleValue = n.doubleValue();
 		System.out.println(intValue + " , " + doubleValue);	// 123 , 123.0
 	}
+	
+	/**
+	 * 3.2.2 Integer常用功能
+	 * 该类提供了多个方法，能在int和String类型之间相互转换，还提供了一些常量如：static int MAX_VALUE，static int MIN_VALUE
+	 */
+	@Test
+	public void testParseInt() {
+		String str0 = "123";
+		int value0 = Integer.parseInt(str0);
+		System.out.println(value0);							// 123
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
+		//String str1 = "一百二十三";
+		//int value1 = Integer.parseInt(str1);				// java.lang.NumberFormatException
+		//System.out.println(value1);
+	}
 }
