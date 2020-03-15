@@ -196,4 +196,19 @@ public class Case02RegExpAndWrapperClass {
 		//int value1 = Integer.parseInt(str1);				// java.lang.NumberFormatException
 		//System.out.println(value1);
 	}
+	
+	/**
+	 * 3.2.3 Double常用功能
+	 * double doubleValue()返回此Double对象的double值
+	 * static double parseDouble(String s)返回一个新的double值，该值被初始化为用指定的String表示的值
+	 */
+	@Test
+	public void testParseDoubleValue() {
+		String s1 = "";
+		double value = Double.parseDouble(s1);
+		System.out.println(value);
+		
+		//s1 = "$12345.00";
+		//value = Double.parseDouble(s1);						// NumberFormatException
+	}
 }
