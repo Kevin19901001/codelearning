@@ -211,4 +211,16 @@ public class Case02RegExpAndWrapperClass {
 		//s1 = "$12345.00";
 		//value = Double.parseDouble(s1);						// NumberFormatException
 	}
+	
+	/**
+	 * 3.2.4 自动装箱和拆箱操作
+	 * 从Java5.0版本以后加入到了autoboxing功能
+	 * 自动装箱和拆箱的功能是依靠JDK5的编译器在编译期的预处理工作
+	 */
+	public void testAutoBoxing() {
+		Integer a = 100;		// 装箱
+		Integer b = 200;		// 装箱
+		Integer c = a + b;		// 拆箱再装箱
+		double d = c;			// 拆箱
+	}
 }
