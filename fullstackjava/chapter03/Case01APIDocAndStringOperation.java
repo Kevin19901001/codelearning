@@ -221,6 +221,7 @@ public class Case02RegExpAndWrapperClass {
 		Integer a = 100;		// 装箱
 		Integer b = 200;		// 装箱
 		Integer c = a + b;		// 拆箱再装箱
+		@SuppressWarnings("unused")
 		double d = c;			// 拆箱
 	}
 }
