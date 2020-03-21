@@ -1,5 +1,7 @@
 package chapter03;
 
+import java.util.Date;
+
 public class Case03DateAndCollection {
 
 	public static void main(String[] args) {
@@ -10,6 +12,13 @@ public class Case03DateAndCollection {
 		
 		// 1.1.2 Date类简介
 		// java.util.Date类封装日期及时间信息
+		// Date类的大多数用于时间分量计算的方法已经被Calendar取代
+		Date date = new Date();
+		System.out.println(date);
+		
+		long time = date.getTime();
+		System.out.println(time);
+		
 	}
 
 }
