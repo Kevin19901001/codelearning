@@ -2,7 +2,9 @@ package chapter03;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.junit.Test;
 
@@ -32,6 +34,12 @@ public class Case03DateAndCollection {
 		// 方法：
 		// final String format(Date date) Date => String
 		// Date parse(String source) throw ParseException String => Date
+		
+		
+		// 1.3 Calendar
+		// 1.3.1 Calendar简介
+		// java.util.Calendar类用于封装日历信息，其主要作用在于其方法可以对时间分量进行运算；
+		// Calendar是抽象类，其具体子类针对不同国家的日历系统，其中应用最广泛的是GregorianCalendar（通用的阳历），对应世界上绝大多数国家或地区使用的标准日历系统。
 	}
 	
 	/**
@@ -88,6 +96,22 @@ public class Case03DateAndCollection {
 		}
 		
 		System.out.println(date);
+	}
+	
+	/**
+	 * 1.3.2 getInstance()方法
+	 * Calendar提供了一个类方法getInstance()，以获得此类型的一个通用的对象
+	 * Calendar的getInstance()方法返回一个Calendar对象，其日历字段已由当前日期和时间初始化。
+	 */
+	@Test
+	public void testGetInstance() {
+		Calendar c = Calendar.getInstance();
+		System.out.println(c.getClass().getName());
+
+		System.out.println(c.getTime());
+		
+		GregorianCalendar gc = new GregorianCalendar(2020, Calendar.MARCH, 23);
+		System.out.println(gc.getTime());
 	}
 
 }
