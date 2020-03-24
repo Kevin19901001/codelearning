@@ -113,5 +113,20 @@ public class Case03DateAndCollection {
 		GregorianCalendar gc = new GregorianCalendar(2020, Calendar.MARCH, 23);
 		System.out.println(gc.getTime());
 	}
+	
+	/**
+	 * 1.3.3 设置日期及时间分量
+	 */
+	@Test
+	public void testSet() {
+		Calendar clndr = Calendar.getInstance();
+		clndr.set(Calendar.YEAR, 2020);
+		clndr.set(Calendar.MONTH, Calendar.MARCH);
+		clndr.set(Calendar.DATE, 24);
+		System.out.println(clndr.getTime());		// Tue Mar 24 20:49:40 CST 2020
+		
+		clndr.set(Calendar.DATE, 32);
+		System.out.println(clndr.getTime());		// Wed Apr 01 20:49:40 CST 2020
+	}
 
 }
