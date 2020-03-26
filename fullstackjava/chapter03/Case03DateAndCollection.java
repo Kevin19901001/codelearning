@@ -128,5 +128,36 @@ public class Case03DateAndCollection {
 		clndr.set(Calendar.DATE, 32);
 		System.out.println(clndr.getTime());		// Wed Apr 01 20:49:40 CST 2020
 	}
+	
+	/**
+	 * 1.3.4 获取日期及时间分量
+	 */
+	@Test
+	public void testGet() {
+		Calendar clndr = Calendar.getInstance();
+		clndr.set(Calendar.YEAR, 2020);
+		clndr.set(Calendar.MONTH, Calendar.MARCH);
+		clndr.set(Calendar.DATE, 25);
+		
+		int day = clndr.get(Calendar.DAY_OF_WEEK);
+		System.out.println(day);
+	}
+	
+	/**
+	 * getActualMaximum方法
+	 * int getActualMaximum(int field)给定此Calendar的时间值，返回指定日历字段可能拥有的最大值
+	 */
+	@Test
+	public void testGetActualMaximum() {
+		int year = 2020;
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.YEAR, year);
+		c.set(Calendar.DATE, 1);
+		
+		for(int month=Calendar.JANUARY; month<=Calendar.DECEMBER; month++) {
+			c.set(Calendar.MONTH, month);
+			System.out.println(year + "年" + (month + 1) + "月" + c.getActualMaximum(Calendar.DATE) + "天");
+		}
+	}
 
 }
