@@ -144,7 +144,7 @@ public class Case03DateAndCollection {
 	}
 	
 	/**
-	 * getActualMaximum方法
+	 * 1.3.5 getActualMaximum方法
 	 * int getActualMaximum(int field)给定此Calendar的时间值，返回指定日历字段可能拥有的最大值
 	 */
 	@Test
@@ -158,6 +158,21 @@ public class Case03DateAndCollection {
 			c.set(Calendar.MONTH, month);
 			System.out.println(year + "年" + (month + 1) + "月" + c.getActualMaximum(Calendar.DATE) + "天");
 		}
+	}
+	
+	/**
+	 * add方法
+	 * void add(int field, int mount)为给定的时间分量的值加上给定的值，若给定的值为负数，则是减去给定的值
+	 * 输出1年后再减去3个月的日期
+	 */
+	@Test
+	public void testAdd() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.YEAR, 1);
+		calendar.add(Calendar.MONTH, -3);
+		System.out.println("year:" + calendar.get(Calendar.YEAR));
+		System.out.println("month:" + calendar.get(Calendar.MONTH));
+		System.out.println("day:" + calendar.get(Calendar.DAY_OF_MONTH));
 	}
 
 }
