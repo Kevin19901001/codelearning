@@ -161,7 +161,7 @@ public class Case03DateAndCollection {
 	}
 	
 	/**
-	 * add方法
+	 * 1.3.6 add方法
 	 * void add(int field, int mount)为给定的时间分量的值加上给定的值，若给定的值为负数，则是减去给定的值
 	 * 输出1年后再减去3个月的日期
 	 */
@@ -173,6 +173,22 @@ public class Case03DateAndCollection {
 		System.out.println("year:" + calendar.get(Calendar.YEAR));
 		System.out.println("month:" + calendar.get(Calendar.MONTH));
 		System.out.println("day:" + calendar.get(Calendar.DAY_OF_MONTH));
+	}
+	
+	/**
+	 * 1.3.7 setTime与getTime方法
+	 * Date getTime():使用Date描述Calendar表示日期并返回
+	 * void setTime(Date d):使用Calendar表示Date所描述的日期
+	 */
+	@Test
+	public void testGetTimeAndSetTime() {
+		Calendar calendar = Calendar.getInstance();
+		Date date = new Date();
+		System.out.println(date);
+		
+		calendar.setTime(date);
+		date = calendar.getTime();
+		System.out.println(date);
 	}
 
 }
