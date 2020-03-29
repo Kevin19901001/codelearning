@@ -40,6 +40,9 @@ public class Case03DateAndCollection {
 		// 1.3.1 Calendar简介
 		// java.util.Calendar类用于封装日历信息，其主要作用在于其方法可以对时间分量进行运算；
 		// Calendar是抽象类，其具体子类针对不同国家的日历系统，其中应用最广泛的是GregorianCalendar（通用的阳历），对应世界上绝大多数国家或地区使用的标准日历系统。
+		
+		
+		// 2. 集合框架
 	}
 	
 	/**
