@@ -43,6 +43,7 @@ public class Case03DateAndCollection {
 		
 		
 		// 2. ¼¯ºÏ¿ò¼Ü
+		// 2.1 Collection
 	}
 	
 	/**
