@@ -44,6 +44,13 @@ public class Case03DateAndCollection {
 		
 		// 2. 集合框架
 		// 2.1 Collection
+		// 在实际开发中，需要将实际的对象存储于特定数据结构的容器中。JDK提供了这样的容器---集合（Collection）
+		// Collection是一个接口，定义了集合相关的操作方法。其有两个字接口，List和Set
+		// List：可重复集
+		// Set：不可重复集
+		
+		
+		// 2.1.2 集合持有对象的引用
 	}
 	
 	/**
