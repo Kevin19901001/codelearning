@@ -2,7 +2,9 @@ package chapter03;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -205,6 +207,18 @@ public class Case03DateAndCollection {
 	
 	/**
 	 * 2.1.3 add方法
+	 * Collection定义了一个add方法，用于向集合中添加新的元素：bolean add(E e)
+	 * 该方法会将给定的元素添加进集合，若添加成功则返回true，否则返回false
 	 */
+	@Test
+	public void testAddOfCollection() {
+		Collection<String> c = new ArrayList<String>();
+		System.out.println(c);
+		
+		c.add("a");
+		c.add("b");
+		c.add("c");
+		System.out.println(c);
+	}
 
 }
