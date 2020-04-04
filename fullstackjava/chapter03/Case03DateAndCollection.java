@@ -220,5 +220,66 @@ public class Case03DateAndCollection {
 		c.add("c");
 		System.out.println(c);
 	}
+	
+	/**
+	 * 2.1.4 contains方法
+	 * boolean contains(Object o)
+	 * 该方法会用于判断给定的元素是否被包含在集合中，若包含则返回true，否则返回false。
+	 * 这里需要注意的是，集合在判断元素是否被包含在集合中，是根据每个元素的equals()方法进行比较后的结果。
+	 * 通常有必要重写equals()保证contains方法的合理结果。
+	 */
+	@Test
+	public void testContains() {
+		Collection<Cell> cells = new ArrayList<Cell>();
+		cells.add(new Cell(1, 2));
+		cells.add(new Cell(2, 3));
+		cells.add(new Cell(1, 3));
+		cells.add(new Cell(3, 1));
+		
+		Cell cell = new Cell(1, 2);
+		// List集合contains方法和对象的equals方法相关
+		boolean isContained = cells.contains(cell);
+		
+		// 如果Cell不重写equals方法，将返回false
+		System.out.println(isContained);	// true
+	}
 
+}
+
+class Cell {
+	
+	int row;
+	int col;
+	
+	public Cell(int row, int col) {
+		super();
+		this.row = row;
+		this.col = col;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + col;
+		result = prime * result + row;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cell other = (Cell) obj;
+		if (col != other.col)
+			return false;
+		if (row != other.row)
+			return false;
+		return true;
+	}
+	
 }
