@@ -243,6 +243,10 @@ public class Case03DateAndCollection {
 		// 如果Cell不重写equals方法，将返回false
 		System.out.println(isContained);	// true
 	}
+	
+	/**
+	 * 2.1.5 size, clear, isEmpty
+	 */
 
 }
 
