@@ -246,7 +246,25 @@ public class Case03DateAndCollection {
 	
 	/**
 	 * 2.1.5 size, clear, isEmpty
+	 * int size()该方法用于返回当前集合中的元素总数
+	 * void clear()该方法用于清空当前集合
+	 * boolean isEmpty()该方法用于判断当前集合中是否不包含任何元素
 	 */
+	@Test
+	public void testSizeAndClearAndIsEmpty() {
+		Collection<String> c = new ArrayList<String>();
+		System.out.println(c.isEmpty());
+		
+		c.add("java");
+		c.add("cpp");
+		c.add("php");
+		c.add("c#");
+		c.add("object-c");
+		System.out.println("is empty:" + c.isEmpty() + " " + "size:" + c.size());
+		
+		c.clear();
+		System.out.println("is empty:" + c.isEmpty() + " " + "size:" + c.size());
+	}
 
 }
 
